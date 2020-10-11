@@ -7,7 +7,6 @@
     - tomcat8
 
 - name: copy
-  synchronize:
-    src: {{ src }}
-    dest: {{ dst }}
-
+    synchronize: src={{ src }} dest={{ dst }}
+  #    src: {{ src }}
+  #    dest: {{ dst }}
