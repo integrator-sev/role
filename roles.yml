@@ -1,0 +1,14 @@
+---
+- name: release
+  hosts: web
+  become: yes
+
+  roles:
+     - release
+
+- name: prod
+  hosts: db
+  become: yes
+
+  roles:
+    - prod
