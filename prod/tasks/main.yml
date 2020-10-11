@@ -1,0 +1,13 @@
+---
+# tasks file for
+- name: install apps
+  apt: name={{ item }} state=present
+  with_item:
+    - openjdk8
+    - tomcat8
+
+- name: copy
+  synchronize:
+    src: {{ src }}
+    dest: {{ dst }}
+

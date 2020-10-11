@@ -1,0 +1,24 @@
+---
+# tasks file for release
+- name: install packages
+  apt: name={{ item }} state=installed
+  with_items:
+    - git
+    - maven
+    - default-jdk
+
+- name: cloning git
+  git:
+    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
+    dest: /opt/git/boxfuse-sample-java-war-hello
+
+- name: packaging
+  command: mvn clean package #-f /opt/git/boxfuse-sample-java-war-hello/pom.xml
+    args:
+      chdir: /opt/git/boxfuse-sample-java-war-hello/
+
+- name: copy
+  synchronize:
+    src: {{ src }}
+    dest: {{ dst }}
+

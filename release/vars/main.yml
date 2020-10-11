@@ -1,0 +1,7 @@
+---
+# vars file for release
+- name:
+    src: /opt/git/boxfuse-sample-java-war-hello/target/
+
+- name:
+    dst: master:/opt/release/
