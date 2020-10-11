@@ -14,8 +14,8 @@
 
 - name: packaging
   command: mvn clean package #-f /opt/git/boxfuse-sample-java-war-hello/pom.xml
-    args:
-      chdir: /opt/git/boxfuse-sample-java-war-hello/
+  args:
+    chdir: /opt/git/boxfuse-sample-java-war-hello/
 
 - name: copy
   synchronize:
