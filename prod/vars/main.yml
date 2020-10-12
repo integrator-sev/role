@@ -1,5 +1,5 @@
 ---
 # vars file for release
-src: master:/opt/release/*.war
+src: master:/opt/release/
 
-dst: /var/lib/test.war
+dst: /var/lib/

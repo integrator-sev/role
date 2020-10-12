@@ -1,5 +1,5 @@
 ---
 # vars file for release
-src: slave/opt/git/boxfuse-sample-java-war-hello/target/
+src: slave02:/opt/git/boxfuse-sample-java-war-hello/target/
 
 dst: master:/opt/release/
